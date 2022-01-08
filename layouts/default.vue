@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav
+    <!-- <nav
       class="navbar header has-shadow is-primary"
       role="navigation"
       aria-label="main navigation"
@@ -23,12 +23,12 @@
           <span />
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <section class="main-content columns">
       <aside class="column is-2 section">
         <p class="menu-label is-hidden-touch">
-          General
+          Меню
         </p>
         <ul class="menu-list">
           <li
@@ -59,14 +59,14 @@ export default {
     return {
       items: [
         {
-          title: 'Home',
+          title: 'Главная',
           icon: 'home',
           to: { name: 'index' }
         },
         {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
+          title: 'Корзина',
+          icon: 'cash',
+          to: { name: 'orders' }
         }
       ]
     }

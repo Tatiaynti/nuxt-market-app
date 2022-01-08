@@ -1,52 +1,50 @@
 <template>
   <section class="section">
     <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github"
-      >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
 
       <card
-        title="Responsive"
+        title="Добавить товар"
         icon="cellphone-link"
       >
-        <b class="has-text-grey">
-          Every
-        </b> component is responsive
+       <section>
+        <b-button
+            label="Добавить новый товар"
+            type="is-primary"
+            size="is-medium"
+            @click="isComponentModalActive = true" />
+
+        <b-modal
+            v-model="isComponentModalActive"
+            has-modal-card
+            full-screen
+            :can-cancel="false">
+            <modal-form v-bind="formProps"></modal-form>
+        </b-modal>
+    </section>
       </card>
 
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">
-          Vue.js
-        </a> and <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
     </div>
   </section>
 </template>
 
 <script>
 import Card from '~/components/Card'
+import ModalForm from '~/components/ModalForm'
 
-export default {
-  name: 'IndexPage',
-  components: {
-    Card
-  }
+    export default {
+        name: 'IndexPage',
+        components: {
+            ModalForm,
+            Card
+        },
+        data() {
+            return {
+                isComponentModalActive: false,
+                formProps: {
+                    email: 'evan@you.com',
+                    password: 'testing'
+                }
+            }
+        }
 }
 </script>
