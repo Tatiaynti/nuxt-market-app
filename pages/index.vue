@@ -40,9 +40,12 @@ import ModalForm from '~/components/ModalForm'
         data() {
             return {
                 isComponentModalActive: false,
-                formProps: {
-                    email: 'evan@you.com',
-                    password: 'testing'
+                formProps:  {
+                    // id: 1,
+                    // name: 'iPhone 13 128 ГБ черный',
+                    // image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/484b878691d685e6045bb0b2de36f9d2/c201023fee63375d614103f3eb86c77160656dae59094cd22a883302c5144fbc.jpg',
+                    // price: 2326,
+                    // description: 'Смартфон Apple iPhone 13 со 128 ГБ постоянной памяти',
                 }
             }
         }
